@@ -35,7 +35,7 @@ function CreateUser({ setLoggedIn, setUserInformation }) {
 
   return (
     <div className="PageWrapper">
-      <h1>Create User</h1>
+      <h1 className="Green Subtitles">Create User</h1>
       <CreateUserForm signUpUser={signUpUser} />
     </div>
   );

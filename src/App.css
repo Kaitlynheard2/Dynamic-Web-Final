@@ -1,7 +1,32 @@
+body {
+  background-color: #f2edeb;
+}
+
 .Form form {
   display: flex;
   flex-direction: column;
   max-width: 500px;
+}
+
+.Labels {
+  font-family: "Questrial", sans-serif;
+  font-size: 18px;
+  color: #3e6649;
+}
+
+input {
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+}
+
+button {
+  background-color: #3e6649;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-style: 2px solid #3e6649;
 }
 
 .Form input {
@@ -9,8 +34,37 @@
   padding: 10px 5px;
 }
 
-.logo {
-  font-size: 20px;
+.Header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px 25px;
+}
+
+.Header nav a {
+  color: #3e6649;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 0 10px;
+  padding: 2px 10px;
+  text-decoration: none;
+}
+
+.Header nav a:hover {
+  text-decoration: underline;
+}
+
+.Logo {
+  font-size: 80px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+}
+
+.Moto {
+  font-family: "Questrial", sans-serif;
+  font-size: 18px;
 }
 
 .Green {
@@ -26,9 +80,18 @@
 }
 
 .Yellow {
-  color: #e8e65a;
+  color: #e0bf16;
 }
 
-.font-link {
-  font-family: "Libre Baskerville", serif;
+.Subtitles {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Questrial", sans-serif;
+  font-weight: bold;
+}
+
+.PageWrapper {
+  padding: 0 25px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
