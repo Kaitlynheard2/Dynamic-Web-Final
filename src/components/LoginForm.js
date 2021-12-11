@@ -1,0 +1,19 @@
+import React from "react";
+
+function LoginForm({ loginUser }) {
+  return (
+    <div className="Form">
+      <h2>Login</h2>
+      <form onSubmit={(e) => loginUser(e)}>
+        <label htmlFor="email">Email</label>
+        <input type="email" name="email" placeholder="Enter Email"></input>
+
+        <label htmlFor="password">Password</label>
+        <input type="password" name="password" placeholder="****"></input>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+}
+
+export default LoginForm;
