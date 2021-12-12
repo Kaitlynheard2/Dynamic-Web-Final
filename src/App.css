@@ -95,3 +95,13 @@ button {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+.ProfileCard {
+  background-color: white;
+}
+
+.NavLinksMargins {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

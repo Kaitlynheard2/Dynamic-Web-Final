@@ -13,8 +13,12 @@ function Header({ logout, loggedIn }) {
       <nav>
         {!loggedIn && (
           <>
-            <a href="/">Login</a>
-            <a href="/create">Get Started</a>
+            <div className="NavLinksMargins">
+              <a href="/">Login</a>
+              <form action="/create">
+                <button type="submit">Get Started</button>
+              </form>
+            </div>
           </>
         )}
         {loggedIn && (

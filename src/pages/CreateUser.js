@@ -9,6 +9,7 @@ function CreateUser({ setLoggedIn, setUserInformation }) {
 
       const email = e.currentTarget.email.value;
       const password = e.currentTarget.password.value;
+      const name = e.currentTarget.name.value;
 
       const auth = getAuth();
 
@@ -18,7 +19,7 @@ function CreateUser({ setLoggedIn, setUserInformation }) {
           setLoggedIn(true);
           setUserInformation({
             email: user.email,
-            displayName: user.displayName,
+            displayName: name,
             uid: user.uid,
             accessToken: user.accessToken,
           });
