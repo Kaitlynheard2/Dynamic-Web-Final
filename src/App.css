@@ -154,5 +154,10 @@ button {
 
 .RecipeCardWrapper {
   background-color: white;
-  max-width: 40%;
+  max-width: 20%;
+  padding: 40px;
+}
+
+.RecipeImage {
+  width: 100%;
 }

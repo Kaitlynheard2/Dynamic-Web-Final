@@ -1,13 +1,19 @@
 import React from "react";
 
-function RecipeCard({ recipe, userInformation }) {
+function RecipeCard({ recipe, upperCaseName }) {
   return (
     <div className="RecipeCardWrapper">
-      <img src={recipe.imgSrc} alt={recipe.imageAlt} />
-      <p className="DashboardUsername">{userInformation.displayName}</p>
-      <p>{recipe.recipeDirections}</p>
-      <p>{recipe.servings}</p>
-      <p>{recipe.cooktime}</p>
+      <div>
+        <img
+          className="RecipeImage"
+          src={recipe.imgSrc}
+          alt={recipe.imageAlt}
+        />
+      </div>
+      <p>{recipe.recipeName}</p>
+      <p className="DashboardUsername">BY {upperCaseName}</p>
+      <p>{recipe.servingSize} servings</p>
+      <p>{recipe.cookTime} minutes</p>
     </div>
   );
 }
