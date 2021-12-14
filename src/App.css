@@ -26,7 +26,8 @@ button {
   color: white;
   font-size: 18px;
   padding: 10px;
-  border-style: 2px solid #3e6649;
+  border: none;
+  cursor: pointer;
 }
 
 .Form input {
@@ -96,12 +97,62 @@ button {
   max-width: 1200px;
 }
 
+.UserProfilePageWrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 0 25px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.UserProfileSection1 {
+  margin-left: 50px;
+}
+
+.UserProfileSection2 {
+  display: flex;
+  flex-direction: column;
+}
+
 .ProfileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
+  padding: 40px;
+}
+
+.ProfileCard2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 40px;
+  width: 600px;
+}
+
+.ProfileStatsMargins {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
 }
 
 .NavLinksMargins {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.ProfileImage {
+  background-color: #3e6649;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.RecipeCardWrapper {
+  background-color: white;
+  max-width: 40%;
 }

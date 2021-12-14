@@ -2,14 +2,19 @@ import React from "react";
 
 function UserProfile({ userInformation }) {
   return (
-    <div className="PageWrapper">
+    <div className="UserProfilePageWrapper">
       <div className="ProfileCard">
-        <h1 className="Subtitles">{userInformation.displayName}</h1>
-        <p>Allergies:</p>
+        <div className="ProfileImage"></div>
+        <h1 className="Green Subtitles">{userInformation.displayName}</h1>
+        <p className="Labels">Allergies:</p>
       </div>
-      <p> EMAIL: {userInformation.email} </p>
-      <p> NAME: {userInformation.displayName} </p>
-      <p> UID: {userInformation.uid} </p>
+      <section className="UserProfileSection1">
+        <div className="ProfileCard2">
+          <p className="Labels">Your Cookbooks</p>
+          <p className="Labels">Reactions</p>
+          <p className="Labels">Total Comments</p>
+        </div>
+      </section>
     </div>
   );
 }

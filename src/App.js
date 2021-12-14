@@ -10,6 +10,9 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import "./App.css";
 //page imports
 import CreateUser from "./pages/CreateUser";
+import AddPost from "./pages/AddPost";
+import Post from "./pages/Post";
+import Dashboard from "./pages/Dashboard";
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import UserProfile from "./pages/UserProfile";
@@ -84,7 +87,7 @@ function App() {
             }
           />
           <Route
-            path="/"
+            path="/login"
             element={
               !loggedIn ? (
                 <Login
@@ -95,6 +98,13 @@ function App() {
                 <Navigate to={`/user/${userInformation.uid}`} />
               )
             }
+          />
+
+          <Route path="/add-post" element={<AddPost />} />
+          <Route path="/recipe/:id" element={<Post />} />
+          <Route
+            path="/"
+            element={<Dashboard userInformation={userInformation} />}
           />
         </Routes>
       </Router>

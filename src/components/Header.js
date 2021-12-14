@@ -26,6 +26,8 @@ function Header({ logout, loggedIn }) {
             <a className="Green" href="/user/:id">
               Profile
             </a>
+            <a className="Green" href="/"></a>
+            <a className="Green" href="/add-post"></a>
             <button onClick={() => logout()}>Log Out</button>
           </>
         )}

@@ -7,7 +7,7 @@ function CreateUserForm({ signUpUser }) {
         <label className="Labels" htmlFor="name">
           Full Name
         </label>
-        <input type="text" name="name" placeholder="First Last"></input>
+        <input type="name" name="name" placeholder="First Last"></input>
 
         <label className="Labels" htmlFor="email">
           Email
