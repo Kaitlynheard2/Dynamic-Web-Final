@@ -8,6 +8,16 @@ body {
   max-width: 500px;
 }
 
+.DashboardPageWrapper {
+  padding: 0 25px;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .Labels {
   font-family: "Questrial", sans-serif;
   font-size: 18px;
@@ -45,6 +55,7 @@ button {
   margin: 0 auto;
   max-width: 1200px;
   padding: 20px 25px;
+  margin-bottom: 50px;
 }
 
 .Header nav a {
@@ -111,10 +122,6 @@ button {
   max-width: 1200px;
 }
 
-.UserProfileSection1 {
-  margin-left: 50px;
-}
-
 .UserProfileSection2 {
   display: flex;
   flex-direction: column;
@@ -125,7 +132,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*justify-content: space-between;*/
   background-color: white;
   padding: 40px;
   border-radius: 10px;
@@ -166,19 +172,19 @@ button {
 
 .RecipeImage {
   width: 100%;
+  border-radius: 10px;
 }
 
 .ProfileLinks {
   color: #3e6649;
   cursor: pointer;
-  font-size: 15px;
-  margin: 0 10px;
+  font-size: 13px;
   text-decoration: none;
 }
 
 .RecipeTitle {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
   font-family: "Questrial", sans-serif;
   text-decoration: none;
 }
@@ -197,4 +203,53 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.Letter {
+  text-align: center;
+  color: white;
+  font-family: "Libre Baskerville", serif;
+  font-weight: Bold;
+  font-size: 100px;
+}
+
+.AddPostPageWrapper {
+  background-color: #3e6649;
+  width: 600px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.createButton {
+  background-color: white;
+  color: #3e6649;
+  width: 100%;
+  margin: 0;
+}
+
+.createPostLabels {
+  color: white;
+  font-family: "Questrial", sans-serif;
+}
+
+.createPostSubtitle {
+  font-family: "Questrial", sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.createPostInput {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+.AddPostWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+::placeholder {
+  font-style: italic;
 }

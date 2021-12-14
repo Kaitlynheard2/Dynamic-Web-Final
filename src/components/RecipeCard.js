@@ -15,10 +15,9 @@ function RecipeCard({ recipe }) {
             {recipe.recipeName}
           </a>
         </p>
-        <p className="Gray">
-          BY
+        <p className="Gray RecipeLabels">
           <a className="ProfileLinks" href={`/user/${recipe.userID}`}>
-            {recipe.userName.toUpperCase()}
+            BY {recipe.userName.toUpperCase()}
           </a>
         </p>
       </div>

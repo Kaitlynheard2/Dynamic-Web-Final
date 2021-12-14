@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
 import axios from "axios";
 
-export const mock_data = [
+/*export const mock_data = [
   {
     imgSrc:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/macaroni-and-cheese-recipe-1622135326.png?crop=0.786xw:0.901xh;0.0731xw,0.00975xh&resize=640:*",
@@ -17,6 +17,7 @@ export const mock_data = [
     userName: "Kaitlyn",
   },
 ];
+*/
 
 const url = `http://localhost:4000/`;
 function Dashboard({ userInformation }) {
@@ -35,8 +36,7 @@ function Dashboard({ userInformation }) {
   }, []);
 
   return (
-    <div className="PageWrapper">
-      <p>Dashboard</p>
+    <div className="DashboardPageWrapper">
       {recipe &&
         recipe.map((recipe, i) => <RecipeCard recipe={recipe} key={i} />)}
     </div>

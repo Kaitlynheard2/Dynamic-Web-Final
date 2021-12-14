@@ -102,7 +102,13 @@ function App() {
 
           <Route
             path="/add-post"
-            element={loggedIn ? <AddPost /> : <Navigate to="/login" />}
+            element={
+              loggedIn ? (
+                <AddPost userInformation={userInformation} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
           <Route
             path="/recipe/:id"
