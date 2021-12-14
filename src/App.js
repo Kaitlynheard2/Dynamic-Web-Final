@@ -69,7 +69,7 @@ function App() {
               loggedIn ? (
                 <UserProfile userInformation={userInformation} />
               ) : (
-                <Navigate to="/" />
+                <Navigate to="/login" />
               )
             }
           />
@@ -100,11 +100,23 @@ function App() {
             }
           />
 
-          <Route path="/add-post" element={<AddPost />} />
-          <Route path="/recipe/:id" element={<Post />} />
+          <Route
+            path="/add-post"
+            element={loggedIn ? <AddPost /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/recipe/:id"
+            element={loggedIn ? <Post /> : <Navigate to="/login" />}
+          />
           <Route
             path="/"
-            element={<Dashboard userInformation={userInformation} />}
+            element={
+              loggedIn ? (
+                <Dashboard userInformation={userInformation} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
         </Routes>
       </Router>

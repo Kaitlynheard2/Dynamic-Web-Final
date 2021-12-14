@@ -1,6 +1,6 @@
 import React from "react";
 
-function RecipeCard({ recipe, upperCaseName }) {
+function RecipeCard({ recipe }) {
   return (
     <div className="RecipeCardWrapper">
       <div>
@@ -9,11 +9,22 @@ function RecipeCard({ recipe, upperCaseName }) {
           src={recipe.imgSrc}
           alt={recipe.imageAlt}
         />
+        <p></p>
+        <p>
+          <a className=" Green RecipeTitle" href={`user/${recipe.postID}`}>
+            {recipe.recipeName}
+          </a>
+        </p>
+        <p className="Gray">
+          BY
+          <a className="ProfileLinks" href={`/user/${recipe.userID}`}>
+            {recipe.userName.toUpperCase()}
+          </a>
+        </p>
       </div>
-      <p>{recipe.recipeName}</p>
-      <p className="DashboardUsername">BY {upperCaseName}</p>
-      <p>{recipe.servingSize} servings</p>
-      <p>{recipe.cookTime} minutes</p>
+
+      <p className="Gray RecipeLabels">{recipe.servingSize} servings</p>
+      <p className="Gray RecipeLabels">{recipe.cookTime} minutes</p>
     </div>
   );
 }

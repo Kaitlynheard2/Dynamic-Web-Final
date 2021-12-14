@@ -1,7 +1,7 @@
 import React from "react";
 import RecipeCard from "../components/RecipeCard";
 
-const mock_data = [
+export const mock_data = [
   {
     imgSrc:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/macaroni-and-cheese-recipe-1622135326.png?crop=0.786xw:0.901xh;0.0731xw,0.00975xh&resize=640:*",
@@ -11,15 +11,17 @@ const mock_data = [
     servingSize: 4,
     recipeName: "Mac and Cheese",
     cookTime: 30,
+    userID: 1,
+    postID: 1,
+    userName: "Kaitlyn",
   },
 ];
 function Dashboard({ userInformation }) {
-  const upperCaseName = userInformation.displayName.toUpperCase();
   return (
     <div className="PageWrapper">
       <p>Dashboard</p>
       {mock_data.map((recipe, i) => (
-        <RecipeCard upperCaseName={upperCaseName} recipe={recipe} key={i} />
+        <RecipeCard recipe={recipe} key={i} />
       ))}
     </div>
   );
