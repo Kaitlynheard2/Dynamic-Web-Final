@@ -9,10 +9,7 @@ function SingleRecipeCard({ recipe }) {
           src={recipe.imgSrc}
           alt={recipe.imageAlt}
         />
-        <p></p>
-        <p>
-          <a className=" Green RecipeTitle">{recipe.recipeName}</a>
-        </p>
+        <p className=" Green RecipeTitle">{recipe.recipeName}</p>
         <p className="Gray RecipeLabels">
           <a className="ProfileLinks" href={`/user/${recipe.userID}`}>
             BY {recipe && recipe.userName}
