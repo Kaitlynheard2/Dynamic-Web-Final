@@ -60,7 +60,11 @@ function App() {
   if (loading || !appInitialized) return null;
   return (
     <>
-      <Header logout={logout} loggedIn={loggedIn} />
+      <Header
+        logout={logout}
+        loggedIn={loggedIn}
+        userInformation={userInformation}
+      />
       <Router>
         <Routes>
           <Route

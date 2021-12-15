@@ -11,9 +11,7 @@ function SingleRecipeCard({ recipe }) {
         />
         <p></p>
         <p>
-          <a className=" Green RecipeTitle" href={`/recipe/${recipe.id}`}>
-            {recipe.recipeName}
-          </a>
+          <a className=" Green RecipeTitle">{recipe.recipeName}</a>
         </p>
         <p className="Gray RecipeLabels">
           <a className="ProfileLinks" href={`/user/${recipe.userID}`}>

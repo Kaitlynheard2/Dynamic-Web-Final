@@ -1,6 +1,7 @@
 import React from "react";
 
-function Header({ logout, loggedIn }) {
+function Header({ logout, loggedIn, userInformation }) {
+  const userURL = `/user/${userInformation.uid}`;
   return (
     <header className="Header">
       <div className="LogoAndMoto">
@@ -23,7 +24,7 @@ function Header({ logout, loggedIn }) {
         )}
         {loggedIn && (
           <>
-            <a className="Green" href="/user/:id">
+            <a className="Green" href={userURL}>
               Profile
             </a>
             <a className="Green" href="/">

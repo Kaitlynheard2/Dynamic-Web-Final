@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import RecipeCard from "../components/RecipeCard";
+import SingleRecipeCard from "../components/SingleRecipeCard";
 
-const url = `http://localhost:4000`;
-//process.env.REACT_APP_BACKEND_URL
+const url = `http://localhost:4000` || process.env.REACT_APP_BACKEND_URL;
 function UserProfile({ userInformation, recipe }) {
   const [recipes, setRecipes] = useState([]);
   let { id } = useParams();
 
   useEffect(() => {
-    // Get All frogs
     axios
       .get(`${url}/posts/${id}`)
       .then(function (response) {
@@ -34,8 +32,10 @@ function UserProfile({ userInformation, recipe }) {
         <h1 className="Green Subtitles">{userInformation.displayName}</h1>
       </div>
       <div className="RHSofPage">
-        {recipe &&
-          recipe.map((recipe, i) => <RecipeCard recipe={recipe} key={i} />)}
+        {recipes &&
+          recipes.map((recipes, i) => (
+            <SingleRecipeCard recipe={recipes} key={i} />
+          ))}
       </div>
     </div>
   );
