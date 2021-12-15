@@ -1,11 +1,76 @@
+/*colors*/
+.Green {
+  color: #3e6649;
+}
+
+.Pink {
+  color: #e3c1c5;
+}
+
+.Red {
+  color: #ed6d66;
+}
+
+.Yellow {
+  color: #e0bf16;
+}
+
+.Gray {
+  color: #7d7c7a;
+}
+
+/*alphabatized classes*/
+
+.AddPostPageWrapper {
+  background-color: #3e6649;
+  width: 600px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
 body {
   background-color: #f2edeb;
 }
 
-.Form form {
+button {
+  background-color: #3e6649;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.createButton {
+  background-color: white;
+  color: #3e6649;
+  width: 100%;
+  margin: 0;
+}
+
+.createPostLabels {
+  color: white;
+  font-family: "Questrial", sans-serif;
+}
+
+.createPostInput {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+.createPostSubtitle {
+  font-family: "Questrial", sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.Creator {
   display: flex;
-  flex-direction: column;
-  max-width: 500px;
+  flex-direction: row;
+  align-items: center;
 }
 
 .DashboardPageWrapper {
@@ -18,29 +83,10 @@ body {
   justify-content: center;
 }
 
-.Labels {
-  font-family: "Questrial", sans-serif;
-  font-size: 18px;
-  color: #3e6649;
-  margin-bottom: 5px;
-}
-
-input {
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom-style: none;
-  border-radius: 10px;
-}
-
-button {
-  background-color: #3e6649;
-  color: white;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
+.Form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
 }
 
 .Form input {
@@ -71,6 +117,29 @@ button {
   text-decoration: underline;
 }
 
+input {
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-radius: 10px;
+}
+
+.Labels {
+  font-family: "Questrial", sans-serif;
+  font-size: 18px;
+  color: #3e6649;
+  margin-bottom: 5px;
+}
+
+.Letter {
+  text-align: center;
+  color: white;
+  font-family: "Libre Baskerville", serif;
+  font-weight: Bold;
+  font-size: 100px;
+}
+
 .Logo {
   font-size: 80px;
   font-family: "Libre Baskerville", serif;
@@ -82,49 +151,14 @@ button {
   font-size: 18px;
 }
 
-.Green {
-  color: #3e6649;
-}
-
-.Pink {
-  color: #e3c1c5;
-}
-
-.Red {
-  color: #ed6d66;
-}
-
-.Yellow {
-  color: #e0bf16;
-}
-
-.Gray {
-  color: #7d7c7a;
-}
-
-.Subtitles {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-family: "Questrial", sans-serif;
-  font-weight: bold;
-}
-
 .PageWrapper {
   padding: 0 25px;
   margin: 0 auto;
   max-width: 1200px;
 }
 
-.UserProfilePageWrapper {
-  display: block;
-  padding: 0 25px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.UserProfileSection2 {
-  display: flex;
-  flex-direction: column;
+::placeholder {
+  font-style: italic;
 }
 
 .ProfileCard {
@@ -150,29 +184,11 @@ button {
   margin-bottom: 20px;
 }
 
-.NavLinksMargins {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .ProfileImage {
   background-color: #3e6649;
   border-radius: 50%;
   width: 200px;
   height: 200px;
-}
-
-.RecipeCardWrapper {
-  background-color: white;
-  width: 600px;
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.RecipeImage {
-  width: 100%;
-  border-radius: 10px;
 }
 
 .ProfileLinks {
@@ -182,21 +198,34 @@ button {
   text-decoration: none;
 }
 
-.RecipeTitle {
-  font-weight: bold;
-  font-size: 30px;
-  font-family: "Questrial", sans-serif;
-  text-decoration: none;
+.NavLinksMargins {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.RecipeCardWrapper {
+  background-color: white;
+  width: 600px;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.RecipeImage {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .RecipeLabels {
   font-family: "Questrial", sans-serif;
 }
 
-.Creator {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.RecipeTitle {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Questrial", sans-serif;
+  text-decoration: none;
 }
 
 .RHSofPage {
@@ -205,51 +234,21 @@ button {
   align-items: center;
 }
 
-.Letter {
-  text-align: center;
-  color: white;
-  font-family: "Libre Baskerville", serif;
-  font-weight: Bold;
-  font-size: 100px;
-}
-
-.AddPostPageWrapper {
-  background-color: #3e6649;
-  width: 600px;
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.createButton {
-  background-color: white;
-  color: #3e6649;
-  width: 100%;
-  margin: 0;
-}
-
-.createPostLabels {
-  color: white;
-  font-family: "Questrial", sans-serif;
-}
-
-.createPostSubtitle {
+.Subtitles {
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-family: "Questrial", sans-serif;
   font-weight: bold;
-  color: white;
 }
 
-.createPostInput {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 30px;
-  margin-top: 5px;
+.UserProfilePageWrapper {
+  display: block;
+  padding: 0 25px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-.AddPostWrapper {
+.UserProfileSection2 {
   display: flex;
   flex-direction: column;
-}
-
-::placeholder {
-  font-style: italic;
 }

@@ -9,17 +9,19 @@ function AddPost({ userInformation }) {
   const navigate = useNavigate();
   function SubmitPost(e) {
     e.preventDefault();
-    const recipeName = e.currentTarget.recipeName;
-    const ingredients = e.currentTarget.ingredients;
-    const directions = e.currentTarget.directions;
-    const imgURL = e.currentTarget.imgURL;
-    const imgAlt = e.currentTarget.imgAlt;
-    const servings = e.currentTarget.servings;
-    const cooktime = e.currentTarget.cooktime;
+    const recipeName = e.currentTarget.recipeName.value;
+    const ingredients = e.currentTarget.ingredients.value;
+    const recipeDirections = e.currentTarget.recipeDirections.value;
+    const imgSrc = e.currentTarget.imgSrc.value;
+    const imgAlt = e.currentTarget.imgAlt.value;
+    const servingSize = e.currentTarget.servingSize.value;
+    const cookTime = e.currentTarget.cookTime.value;
     const userName = userInformation.displayName;
     const userID = userInformation.uid;
 
-    const url = `${baseURL}/create?recipeName=${recipeName}&ingredients=${ingredients}&directions=${directions}&url=${imgURL}&alt=${imgAlt}&servings=${servings}&cooktime=${cooktime}&userName=${userName}&userID=${userID}`;
+    const url = `${baseURL}/create?recipeName=${recipeName}&ingredients=${ingredients}&recipeDirections=${recipeDirections}&imgSrc=${imgSrc}&imgAlt=${imgAlt}&servingSize=${servingSize}&cookTime=${cookTime}&userName=${userName}&userID=${userID}`;
+
+    console.log(url);
 
     axios
       .get(url)

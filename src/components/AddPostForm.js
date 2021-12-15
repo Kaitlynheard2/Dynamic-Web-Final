@@ -34,7 +34,7 @@ function AddPostForm({ SubmitPost }) {
             rows="5"
             className="createPostInput"
             type="text"
-            name="directions"
+            name="recipeDirections"
             placeholder="1. Combine ingredients together in a medium-sized bowl"
           ></textArea>
 
@@ -43,8 +43,8 @@ function AddPostForm({ SubmitPost }) {
           </label>
           <input
             className="createPostInput"
-            type="url"
-            name="imgURL"
+            type="text"
+            name="imgSrc"
             placeholder="http://yummyphoto.jpg"
           ></input>
 
@@ -64,7 +64,7 @@ function AddPostForm({ SubmitPost }) {
           <input
             className="createPostInput"
             type="number"
-            name="servings"
+            name="servingSize"
             placeholder="1"
           ></input>
 
@@ -74,7 +74,7 @@ function AddPostForm({ SubmitPost }) {
           <input
             className="createPostInput"
             type="number"
-            name="cooktime"
+            name="cookTime"
             placeholder="30"
           ></input>
 
