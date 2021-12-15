@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 import RecipeCard from "../components/RecipeCard";
 
+const url = `http://localhost:4000`;
+//process.env.REACT_APP_BACKEND_URL
 function UserProfile({ userInformation, recipe }) {
-  console.log(recipe);
+  const [recipes, setRecipes] = useState([]);
+  let { id } = useParams();
+
+  useEffect(() => {
+    // Get All frogs
+    axios
+      .get(`${url}/posts/${id}`)
+      .then(function (response) {
+        console.log({ response });
+        setRecipes(response.data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.warn(error);
+      });
+  }, [id]);
+
   return (
     <div className="UserProfilePageWrapper">
       <div className="ProfileCard">
