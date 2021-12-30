@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import SingleRecipeCard from "../components/SingleRecipeCard";
 
-const url = `https://pure-chamber-89039.herokuapp.com/`;
+const url = `https://pure-chamber-89039.herokuapp.com`;
 //`http://localhost:4000`
 function Post() {
   const [singleRecipe, setSingleRecipe] = useState({});

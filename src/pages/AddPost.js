@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import AddPostForm from "../components/AddPostForm";
 
-const baseURL = `https://pure-chamber-89039.herokuapp.com/`;
+const baseURL = `https://pure-chamber-89039.herokuapp.com`;
 //`http://localhost:4000`
 
 function AddPost({ userInformation }) {
