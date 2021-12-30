@@ -3,7 +3,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import SingleRecipeCard from "../components/SingleRecipeCard";
 
-const url = `http://localhost:4000` || process.env.REACT_APP_BACKEND_URL;
+const url =
+  `http://localhost:4000` || `https://pure-chamber-89039.herokuapp.com/`;
 function UserProfile({ userInformation, recipe }) {
   const [recipes, setRecipes] = useState([]);
   let { id } = useParams();

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
 import axios from "axios";
 
-const url = `http://localhost:4000/` || process.env.local.REACT_APP_BACKEND_URL;
+const url =
+  `http://localhost:4000` || `https://pure-chamber-89039.herokuapp.com/`;
 function Dashboard() {
   const [recipe, setRecipe] = useState();
   useEffect(() => {
