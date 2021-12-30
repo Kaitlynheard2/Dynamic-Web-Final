@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
 import axios from "axios";
 
-const url = `http://localhost:4000/`;
+const url = `http://localhost:4000/` || process.env.local.REACT_APP_BACKEND_URL;
 function Dashboard() {
   const [recipe, setRecipe] = useState();
   useEffect(() => {

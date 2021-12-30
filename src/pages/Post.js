@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import SingleRecipeCard from "../components/SingleRecipeCard";
 
-const url = `http://localhost:4000`;
+const url = `http://localhost:4000` || process.env.local.REACT_APP_BACKEND_URL;
 function Post() {
   const [singleRecipe, setSingleRecipe] = useState({});
   let { id } = useParams();
